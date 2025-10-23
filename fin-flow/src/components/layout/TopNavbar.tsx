@@ -12,7 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Home, PieChart, Receipt, Sparkles, LogOut, User, Wallet, BarChart3, Target, TrendingUp, Wrench, CreditCard, AlertCircle, Trophy, BookOpen } from 'lucide-react';
+import { Home, PieChart, Receipt, Sparkles, LogOut, User, Wallet, BarChart3, Target, TrendingUp, Wrench, CreditCard, AlertCircle, Trophy, BookOpen, DollarSign, TrendingDown } from 'lucide-react';
 import { DarkModeToggle } from '@/components/DarkModeToggle';
 import { NotificationCenter } from '@/components/NotificationCenter';
 
@@ -35,12 +35,11 @@ export function TopNavbar() {
 
   const navItems = [
     { path: '/dashboard', label: 'Dashboard', icon: Home },
-    { path: '/analytics', label: 'Analytics', icon: BarChart3 },
-    { path: '/subscriptions', label: 'Subscriptions', icon: CreditCard },
-    { path: '/debt', label: 'Debt', icon: AlertCircle },
+    { path: '/income-manager', label: 'Income', icon: DollarSign },
+    { path: '/expense-manager', label: 'Expenses', icon: TrendingDown },
+    { path: '/financial-analytics', label: 'Analytics', icon: BarChart3 },
     { path: '/goals', label: 'Goals', icon: Target },
     { path: '/achievements', label: 'Achievements', icon: Trophy },
-    { path: '/education', label: 'Learn', icon: BookOpen },
   ];
 
   const isActive = (path: string) => location.pathname === path;
